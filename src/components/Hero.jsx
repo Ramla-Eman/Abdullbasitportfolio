@@ -69,7 +69,7 @@ const Hero = () => {
           <img
             src={profileImg}
             alt=""
-            className="absolute lg:top-28 top-7 bottom-0 left-0 mx-auto"
+            className="absolute top-0 bottom-0 left-0 mx-auto border-6 border-text-main rounded-full"
           />
         </motion.div>
       </div>
