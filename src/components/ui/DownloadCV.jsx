@@ -4,8 +4,8 @@ import { MdOutlineFileDownload } from "react-icons/md";
 const DownloadCV = () => {
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Ramla Eman 2024.pdf";
-    link.download = "Ramla Eman 2024.pdf";
+    link.href = '/CV_Abdulbasit.pdf';
+    link.download = 'CV Abdulbasit.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
