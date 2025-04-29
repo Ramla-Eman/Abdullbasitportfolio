@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
+import { Link } from "react-scroll";
 
 // links
 const link = [
   {
     name: "Home",
-    path: "/",
+    path: "home",
+    offset: -200,
   },
   {
     name: "About",
-    path: "#about",
+    path: "about",
   },
   {
     name: "Work",
-    path: "#work",
+    path: "work",
   },
   {
     name: "Contact",
-    path: "#contact",
+    path: "contact",
+    offset: 200,
   },
 ];
 
@@ -35,9 +38,7 @@ const Navbar = () => {
     <div className="px-4 mb-8 border-b border-text shadow-2xl">
       <div className="max-w-7xl mx-auto py-7 flex items-center justify-between">
         {/* logo */}
-        <div className="w-16 text-2xl text-orange font-oswald">
-          AbdullBasit
-        </div>
+        <div className="w-16 text-2xl text-orange font-oswald">AbdullBasit</div>
         {/* menu */}
         <div
           className="md:hidden flex transition-all duration-300"
@@ -56,8 +57,16 @@ const Navbar = () => {
           <ul className="flex md:flex-row flex-col items-center gap-7">
             {link.map((link, index) => {
               return (
-                <li key={index} onClick={()  => closeMenu()} className="text-xl">
-                  <a href={link.path}>{link.name}</a>
+                <li
+                  key={index}
+                  onClick={() => closeMenu()}
+                  activeClass="active"
+                  smooth={true}
+                  spy={true}
+                  offset={link.offset}
+                  className="text-xl cursor-pointer"
+                >
+                  <Link to={link.path}>{link.name}</Link>
                 </li>
               );
             })}
