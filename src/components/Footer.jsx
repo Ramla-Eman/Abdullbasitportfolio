@@ -38,7 +38,7 @@ const link = [
 // media link
 const mediaLink = [
   {
-    path: "/",
+    path: "https://www.facebook.com/profile.php?id=61571200348945",
     icon: <SlSocialFacebook size={35} />,
   },
   {
@@ -46,15 +46,11 @@ const mediaLink = [
     icon: <LiaLinkedinIn size={35} />,
   },
   {
-    path: "#work",
-    icon: <SlSocialInstagram size={35} />,
-  },
-  {
     path: "https://www.pinterest.com/kabdulbasit856/?actingBusinessId=1070519911333406917",
     icon: <ImPinterest2 size={35} />,
   },
   {
-    path: "#work",
+    path: "https://www.youtube.com/@AbdulBasit-l5p8u",
     icon: <AiOutlineYoutube size={35} />,
   },
 ];
